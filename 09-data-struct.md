@@ -1615,6 +1615,7 @@ Test Sorted Set
 ## 9.11 Command Summary
 
 | Category | Commands |
+|----------|----------|
 | String | GET, SET, DEL, TTL, APPEND, STRLEN, EXISTS |
 | Hash | HSET, HGET, HGETALL, HDEL, HLEN, HEXISTS |
 | List | LPUSH, RPUSH, LPOP, RPOP, LRANGE, LLEN |
