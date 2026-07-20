@@ -53,27 +53,18 @@ Redis mendukung berbagai tipe data yang membuatnya lebih dari sekadar key-value 
 
 ### 9.2.1 Type System
 
-```go
-// internal/engine/value.go
-package engine
+Pendem menggunakan pendekatan yang berbeda untuk setiap tipe data:
 
-type ValueType int
+- **String**: Disimpan di LRU evictor dengan generic `Item[V]`
+- **Hash**: Struct `Hash` dengan map[string]string
+- **List**: Struct `List` dengan container/list
+- **Set**: Struct `Set` dengan map[string]struct{}
+- **SortedSet**: Struct `SortedSet` dengan map[string]float64
 
-const (
-    TypeString ValueType = iota
-    TypeHash
-    TypeList
-    TypeSet
-    TypeSortedSet
-)
-
-type Value struct {
-    Type  ValueType
-    Data  interface{}
-    TTL   time.Duration
-    Exp   int64
-}
-```
+Pendekatan ini memberikan:
+- ✅ Type safety
+- ✅ Performance optimal
+- ✅ Clean separation of concerns
 
 ### 9.2.2 Struktur Folder
 
@@ -81,7 +72,6 @@ type Value struct {
 internal/
 ├── engine/
 │   ├── cache.go          # Main cache dengan type system
-│   ├── value.go          # Value dengan multiple types
 │   ├── hash.go           # Hash operations
 │   ├── list.go           # List operations
 │   ├── set.go            # Set operations
