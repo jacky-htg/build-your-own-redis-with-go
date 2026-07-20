@@ -38,7 +38,8 @@ Setelah kita berhasil membangun storage engine dengan LRU eviction di Bab 6, ser
 ### 7.1.2 Solusi: Sharding
 
 Sharding adalah teknik membagi data menjadi beberapa bagian (shards) yang lebih kecil. Setiap shard memiliki lock sendiri, sehingga operasi bisa berjalan paralel.
-text
+
+```text
 
 ┌─────────────────────────────────────────────────────────────────┐
 │                    SOLUSI: SHARDING                             │

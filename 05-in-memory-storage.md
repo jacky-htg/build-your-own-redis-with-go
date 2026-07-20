@@ -15,6 +15,7 @@ Setelah kita berhasil membangun server dengan RESP protocol, sekarang saatnya me
 Cache server menggunakan in-memory storage karena beberapa alasan:
 
 | Karakteristik | In-Memory | Disk-Based |
+|---------------|-----------|------------|
 | Kecepatan | ⚡ Nano/microseconds | 🐢 Milliseconds |
 | Latency | < 1ms | 5-10ms |
 | Throughput | > 1M ops/sec | ~100K ops/sec |
