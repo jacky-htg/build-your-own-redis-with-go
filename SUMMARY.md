@@ -11,3 +11,4 @@
 * [LRU Eviction](06-lru-eviction.md)
 * [Sharding](07-sharding.md)
 * [Persistence](08-persistence.md)
+* [Data Struct](09-data-struct.md)
