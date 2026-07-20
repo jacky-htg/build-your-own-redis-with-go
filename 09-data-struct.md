@@ -1537,78 +1537,78 @@ func main() {
 Test Hash
 
 ```bash
-redis-cli -h localhost -p 6378
+redis-cli -h localhost -p 6379
 
-127.0.0.1:6378> HSET user:1 name "John" age 30
+127.0.0.1:6379> HSET user:1 name "John" age 30
 (integer) 2
 
-127.0.0.1:6378> HGET user:1 name
+127.0.0.1:6379> HGET user:1 name
 "John"
 
-127.0.0.1:6378> HGETALL user:1
+127.0.0.1:6379> HGETALL user:1
 1) "name"
 2) "John"
 3) "age"
 4) "30"
 
-127.0.0.1:6378> HDEL user:1 age
+127.0.0.1:6379> HDEL user:1 age
 (integer) 1
 
-127.0.0.1:6378> HLEN user:1
+127.0.0.1:6379> HLEN user:1
 (integer) 1
 ```
 
 Test List
 
 ```bash
-127.0.0.1:6378> LPUSH queue "item1" "item2"
+127.0.0.1:6379> LPUSH queue "item1" "item2"
 (integer) 2
 
-127.0.0.1:6378> LRANGE queue 0 -1
+127.0.0.1:6379> LRANGE queue 0 -1
 1) "item2"
 2) "item1"
 
-127.0.0.1:6378> LPOP queue
+127.0.0.1:6379> LPOP queue
 "item2"
 
-127.0.0.1:6378> LLEN queue
+127.0.0.1:6379> LLEN queue
 (integer) 1
 ```
 
 Test Set
 
 ```bash
-127.0.0.1:6378> SADD tags "go" "redis" "cache"
+127.0.0.1:6379> SADD tags "go" "redis" "cache"
 (integer) 3
 
-127.0.0.1:6378> SMEMBERS tags
+127.0.0.1:6379> SMEMBERS tags
 1) "go"
 2) "redis"
 3) "cache"
 
-127.0.0.1:6378> SISMEMBER tags "go"
+127.0.0.1:6379> SISMEMBER tags "go"
 (integer) 1
 
-127.0.0.1:6378> SCARD tags
+127.0.0.1:6379> SCARD tags
 (integer) 3
 ```
 
 Test Sorted Set
 
 ```bash
-127.0.0.1:6378> ZADD leaderboard 100 "player1" 200 "player2"
+127.0.0.1:6379> ZADD leaderboard 100 "player1" 200 "player2"
 (integer) 2
 
-127.0.0.1:6378> ZRANGE leaderboard 0 -1 WITHSCORES
+127.0.0.1:6379> ZRANGE leaderboard 0 -1 WITHSCORES
 1) "player1"
 2) "100"
 3) "player2"
 4) "200"
 
-127.0.0.1:6378> ZSCORE leaderboard "player2"
+127.0.0.1:6379> ZSCORE leaderboard "player2"
 "200"
 
-127.0.0.1:6378> ZCARD leaderboard
+127.0.0.1:6379> ZCARD leaderboard
 (integer) 2
 ```
 
