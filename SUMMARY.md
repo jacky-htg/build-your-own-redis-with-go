@@ -2,6 +2,9 @@
 
 * [Build Your Own Redis with Go](README.md)
 
+## Fundamental
+* [Pengenalan](01-pengenalan.md)
+
 ## Networking
 * [Socket Programming](03-socket-programming.md)
 * [RESP Protocol](04-resp-protocol.md)

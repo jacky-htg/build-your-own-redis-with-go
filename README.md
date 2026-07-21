@@ -26,7 +26,7 @@ Prasyarat:
 
 | Bab | Topik | Deskripsi |
 |-----|-------|-----------|
-| Bab 1 | Pengenalan (coming soon) | Arsitektur Redis, desain Pendem, dan persiapan |
+| Bab 1 | Pengenalan | Arsitektur Redis, desain Pendem, dan persiapan |
 | bab 2 | Golang Fundamental (coming soon) | Dasar - dasar golang |
 | Bab 3 | Socket Programming | TCP server, connection handling, graceful shutdown |
 | Bab 4 | RESP Protocol | Redis Serialization Protocol, parser & encoder |
@@ -38,8 +38,8 @@ Prasyarat:
 | Bab 10 | Batch Operations | MGET, MSET, Pipeline |
 | Bab 11 | Transaction (coming soon) | MULTI, EXEC, WATCH |
 | Bab 12 | Pub/Sub & Queue (coming soon) | Real-time messaging dan task distribution |
-| Bab 13 | Clustering (coming soon) | CLustering support, service discovery, gossip protocol, etc |
-| Bab 14 | Monitoring (coming soon) | Metrics, logging, dan observability |
+| Bab 13 | Monitoring (coming soon) | Metrics, logging, dan observability |
+| Bab 14 | Clustering (coming soon) | CLustering support, service discovery, gossip protocol, etc |
 
 ## 🏗️ Arsitektur Pendem
 
