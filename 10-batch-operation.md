@@ -539,4 +539,4 @@ Yang Sudah Kita Pelajari:
 | Throughput | 2,000 ops/sec | 20,000 ops/sec |
 | Network Overhead | 90% | 10% |
 
-Dengan batch operations, kita bisa meningkatkan performa. Selanjutnya, kita akan menambahkan fitur messaging.
+Dengan batch operations, kita bisa meningkatkan performa. Selanjutnya, kita akan menambahkan fitur transaction.
