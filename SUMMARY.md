@@ -4,6 +4,7 @@
 
 ## Fundamental
 * [Pengenalan](01-pengenalan.md)
+* [Golang Fundamental](02-golang-fundamental.md)
 
 ## Networking
 * [Socket Programming](03-socket-programming.md)
