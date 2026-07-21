@@ -27,7 +27,7 @@ Prasyarat:
 | Bab | Topik | Deskripsi |
 |-----|-------|-----------|
 | Bab 1 | Pengenalan | Arsitektur Redis, desain Pendem, dan persiapan |
-| bab 2 | Golang Fundamental (coming soon) | Dasar - dasar golang |
+| bab 2 | Golang Fundamental | Dasar - dasar golang |
 | Bab 3 | Socket Programming | TCP server, connection handling, graceful shutdown |
 | Bab 4 | RESP Protocol | Redis Serialization Protocol, parser & encoder |
 | Bab 5 | In-Memory Storage | Cache engine, TTL, dan background cleanup |
