@@ -8,7 +8,7 @@ Panduan Software Engineer Membangun In-Memory Database dengan Golang
 
 Buku ini adalah panduan langkah demi langkah untuk membangun Redis-like cache server dari awal menggunakan bahasa Go. Dimulai dari socket programming, RESP protocol, hingga fitur-fitur canggih seperti persistence, sharding, dan cluster support.
 
-Hasil akhir dari buku ini adalah **Pendem** - sebuah cache engine production-ready yang bisa Anda gunakan, modifikasi, dan pelajari.
+Hasil akhir dari buku ini adalah **Pendem Database** - sebuah cache engine production-ready yang bisa Anda gunakan, modifikasi, dan pelajari.
 
 ## 🎯 Target Pembaca
 

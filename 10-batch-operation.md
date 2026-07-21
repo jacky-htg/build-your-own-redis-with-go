@@ -122,24 +122,24 @@ func (h *Handler[V]) MGet(args []string) server.RESPValue {
 
 ```bash
 
-redis-cli -h localhost -p 6378
+redis-cli -h localhost -p 6379
 
 # Set data
-127.0.0.1:6378> SET key1 "value1"
+127.0.0.1:6379> SET key1 "value1"
 OK
-127.0.0.1:6378> SET key2 "value2"
+127.0.0.1:6379> SET key2 "value2"
 OK
-127.0.0.1:6378> SET key3 "value3"
+127.0.0.1:6379> SET key3 "value3"
 OK
 
 # MGET
-127.0.0.1:6378> MGET key1 key2 key3
+127.0.0.1:6379> MGET key1 key2 key3
 1) "value1"
 2) "value2"
 3) "value3"
 
 # MGET dengan key tidak ada
-127.0.0.1:6378> MGET key1 key2 key4
+127.0.0.1:6379> MGET key1 key2 key4
 1) "value1"
 2) "value2"
 3) (nil)
@@ -199,20 +199,20 @@ func (h *Handler[V]) MSet(args []string) server.RESPValue {
 
 ```bash
 
-redis-cli -h localhost -p 6378
+redis-cli -h localhost -p 6379
 
 # MSET
-127.0.0.1:6378> MSET key1 value1 key2 value2 key3 value3
+127.0.0.1:6379> MSET key1 value1 key2 value2 key3 value3
 OK
 
 # Verify
-127.0.0.1:6378> MGET key1 key2 key3
+127.0.0.1:6379> MGET key1 key2 key3
 1) "value1"
 2) "value2"
 3) "value3"
 
 # Error: odd number of arguments
-127.0.0.1:6378> MSET key1 value1 key2
+127.0.0.1:6379> MSET key1 value1 key2
 (error) ERR wrong number of arguments for 'mset' command
 ```
 
@@ -283,22 +283,22 @@ func (h *Handler[V]) MSetNX(args []string) server.RESPValue {
 
 ```bash
 
-redis-cli -h localhost -p 6378
+redis-cli -h localhost -p 6379
 
 # Clean up
-127.0.0.1:6378> DEL key1 key2
+127.0.0.1:6379> DEL key1 key2
 (integer) 2
 
 # MSETNX - semua key baru
-127.0.0.1:6378> MSETNX key1 value1 key2 value2
+127.0.0.1:6379> MSETNX key1 value1 key2 value2
 (integer) 1
 
 # MSETNX - ada key yang sudah ada
-127.0.0.1:6378> MSETNX key2 value2 key3 value3
+127.0.0.1:6379> MSETNX key2 value2 key3 value3
 (integer) 0
 
 # Verify: key3 tidak tersimpan
-127.0.0.1:6378> GET key3
+127.0.0.1:6379> GET key3
 (nil)
 ```
 
@@ -402,17 +402,18 @@ func (s *Server) processPipeline(commands []RESPValue) []RESPValue {
 
 ```bash
 
- printf $'*3\r\n$3\r\nSET\r\n$4\r\nkey1\r\n$6\r\nvalue1\r\n' | nc localhost 6378
+printf $'*3\r\n$3\r\nSET\r\n$4\r\nkey1\r\n$6\r\nvalue1\r\n' | nc localhost 6379
 +OK
 
-printf $'*3\r\n$3\r\nSET\r\n$4\r\nkey1\r\n$6\r\nvalue1\r\n*2\r\n$3\r\nGET\r\n$4\r\nkey1\r\n' | nc localhost 6378
+printf $'*3\r\n$3\r\nSET\r\n$4\r\nkey1\r\n$6\r\nvalue1\r\n*2\r\n$3\r\nGET\r\n$4\r\nkey1\r\n' | nc localhost 6379
 +OK
 $6
 value1
 ```
 
-10.6 Performance Comparison
-10.6.1 Benchmark Results
+## 10.6 Performance Comparison
+
+### 10.6.1 Benchmark Results
 
 ```text
 
@@ -438,7 +439,7 @@ value1
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### 10.7.2 Kapan Pakai Pipeline?
+## 10.7 Kapan Pakai Pipeline?
 
 | Skenario | Rekomendasi |
 |----------|-------------|
