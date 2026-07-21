@@ -38,7 +38,7 @@ Prasyarat:
 | Bab 10 | Batch Operations | MGET, MSET, Pipeline |
 | Bab 11 | Transaction (coming soon) | MULTI, EXEC, WATCH |
 | Bab 12 | Pub/Sub & Queue (coming soon) | Real-time messaging dan task distribution |
-| Bab 13 | Clustering (coming soon) | CLustering support, service discovery, gossiup protocol, etc |
+| Bab 13 | Clustering (coming soon) | CLustering support, service discovery, gossip protocol, etc |
 | Bab 14 | Monitoring (coming soon) | Metrics, logging, dan observability |
 
 ## 🏗️ Arsitektur Pendem
@@ -105,8 +105,8 @@ Prasyarat:
 │   └─ Bab 11: Transaction                                        │
 │                                                                 │
 │   📚 REAL-TIME & DISTRIBUTED                                    │
-│   ├─ Bab 12: Data Structures                                    │
-│   └─ Bab 12: Clustering Support                                 │
+│   ├─ Bab 12: Pub Sub & Queue                                    │
+│   └─ Bab 13: Clustering Support                                 │
 │                                                                 │
 │   🚀 PENDEM IS COMPLETE!                                        │
 └─────────────────────────────────────────────────────────────────┘
@@ -186,6 +186,6 @@ Buku ini dilisensikan di bawah [GNU GPL License](LICENSE).
 
 - Author: Rijal Asepnugroho (Jacky Htg)
 - GitHub: jacky-htg
-- Repository: github.com/jacky-htg/pendem
+- Repository: github.com/jacky-htg
 
 🏺 Pendem - Cache Server yang Kokoh Seperti Tanah
