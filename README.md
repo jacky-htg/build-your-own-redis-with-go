@@ -36,7 +36,7 @@ Prasyarat:
 | Bab 8 | Persistence | JSON snapshot, RDB, AOF, dan recovery |
 | Bab 9 | Data Structures | Hash, List, Set, dan Sorted Set |
 | Bab 10 | Batch Operations | MGET, MSET, Pipeline |
-| Bab 11 | Transaction (coming soon) | MULTI, EXEC, WATCH |
+| Bab 11 | Transaction | MULTI, EXEC, WATCH |
 | Bab 12 | Pub/Sub & Queue (coming soon) | Real-time messaging dan task distribution |
 | Bab 13 | Monitoring (coming soon) | Metrics, logging, dan observability |
 | Bab 14 | Clustering (coming soon) | CLustering support, service discovery, gossip protocol, etc |
