@@ -941,14 +941,4 @@ Yang Sudah Kita Pelajari:
 - WATCH - Optimistic locking
 - UNWATCH - Menghapus semua watch
 
-**Command Summary**
-
-| Command | Fungsi |
-|---------|--------|
-| MULTI | Memulai transaction |
-| EXEC | Jalankan semua perintah |
-| DISCARD | Batalkan transaction |
-| WATCH | Awasi key untuk perubahan |
-| UNWATCH | Hapus semua watch |
-
 Dengan transaction, kita bisa melakukan operasi atomic. Selanjutnya, kita akan menambahkan fitur messaging & queue.
