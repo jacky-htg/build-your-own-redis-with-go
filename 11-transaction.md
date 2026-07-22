@@ -944,6 +944,7 @@ Yang Sudah Kita Pelajari:
 **Command Summary**
 
 | Command | Fungsi |
+|---------|--------|
 | MULTI | Memulai transaction |
 | EXEC | Jalankan semua perintah |
 | DISCARD | Batalkan transaction |
